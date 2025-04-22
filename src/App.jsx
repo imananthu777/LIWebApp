@@ -30,11 +30,81 @@ const theme = createTheme({
   palette: {
     primary: {
       main: '#1565c0',
+      light: '#5e92f3',
+      dark: '#003c8f',
     },
     background: {
       default: '#f5f5f5',
+      paper: '#ffffff',
     },
   },
+  typography: {
+    fontFamily: 'Inter, system-ui, Avenir, Helvetica, Arial, sans-serif',
+    h6: {
+      fontSize: '1.125rem',
+      fontWeight: 600,
+      '@media (max-width:600px)': {
+        fontSize: '1rem',
+      },
+    },
+    body1: {
+      fontSize: '1rem',
+      '@media (max-width:600px)': {
+        fontSize: '0.938rem',
+      },
+    },
+    body2: {
+      fontSize: '0.875rem',
+      '@media (max-width:600px)': {
+        fontSize: '0.813rem',
+      },
+    },
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: 'none',
+          borderRadius: '8px',
+          padding: '8px 16px',
+          '@media (max-width:600px)': {
+            padding: '6px 12px',
+          },
+        },
+      },
+    },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          borderRadius: '12px',
+          '@media (max-width:600px)': {
+            borderRadius: '8px',
+          },
+        },
+      },
+    },
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          background: 'linear-gradient(135deg, #1565c0 0%, #0d47a1 100%)',
+        },
+      },
+    },
+    MuiBottomNavigation: {
+      styleOverrides: {
+        root: {
+          height: '64px',
+          '@media (max-width:600px)': {
+            height: '56px',
+          },
+        },
+      },
+    },
+  },
+  shape: {
+    borderRadius: 8,
+  },
+  spacing: 8,
 })
 
 function MainLayout() {
