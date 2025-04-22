@@ -55,7 +55,8 @@ export default function LoginPage({ onLogin }) {
               type="date"
               value={dob}
               onChange={e => setDob(e.target.value)}
-              InputLabelProps={{ shrink: true }}
+              InputLabelProps={{ shrink: true, sx: { fontSize: { xs: 16, sm: 18 } } }}
+              inputProps={{ placeholder: 'YYYY-MM-DD', style: { fontSize: 16 } }}
               sx={{ mb: 2 }}
             />
             {error && <Typography color="error" sx={{ mb: 2 }}>{error}</Typography>}
