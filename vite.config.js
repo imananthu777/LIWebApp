@@ -12,5 +12,8 @@ export default defineConfig({
         '.js': 'jsx'
       }
     }
+  },
+  preview: {
+    allowedHosts: ['liwebapp.onrender.com'],
   }
 })
